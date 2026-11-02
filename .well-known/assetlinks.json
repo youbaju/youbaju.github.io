@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.youbaju.magamat",
+      "sha256_cert_fingerprints": [
+        "67:2D:B5:D5:51:DA:D3:55:68:BF:D8:8D:98:52:BC:E6:4D:D9:5D:5D:D9:84:61:FD:72:A4:12:F9:4E:8F:F7:49"
+      ]
+    }
+  }
+]
