@@ -71,7 +71,7 @@
   .share{ vertical-align:-5px; margin:0 3px; }
 
   .inapp{ display:none; text-align:start; background:#fff3cf; color:#4a3a10; border:1px solid #e8c782; border-radius:14px; padding:12px 14px; margin:0 0 16px; font-size:.9rem; }
-  .inapp b{ display:block; margin-bottom:2px; }
+  .inapp .t{ font-weight:800; margin-bottom:2px; }
   .inapp button{ margin-top:8px; background:#0f2a4a; color:var(--gold); border:0; border-radius:10px; padding:7px 14px; font:800 .85rem 'Cairo',sans-serif; cursor:pointer; }
   body.is-inapp .inapp{ display:block; }
 
@@ -99,7 +99,7 @@
   <div class="free"><span data-l="ar">مجاني</span><span data-l="en">Free</span></div>
 
   <div class="inapp" id="inapp">
-    <b data-l="ar">أنت داخل متصفح تطبيق (تيك توك / إنستغرام…)</b><b data-l="en">You are inside an in-app browser</b>
+    <div class="t"><span data-l="ar">أنت داخل متصفح تطبيق (تيك توك / إنستغرام…)</span><span data-l="en">You are inside an in-app browser</span></div>
     <span data-l="ar">لأفضل نتيجة افتح هذه الصفحة في متصفح جوالك: اضغط ⋯ أو ⋮ ثم «افتح في المتصفح»، أو انسخ الرابط.</span>
     <span data-l="en">For best results open this page in your phone's browser: tap ⋯ or ⋮ then “Open in browser”, or copy the link.</span><br>
     <button type="button" id="copyBtn"><span data-l="ar">نسخ الرابط</span><span data-l="en">Copy link</span></button>
@@ -141,7 +141,7 @@
     </div>
   </section>
 
-  <p class="foot">Oud &amp; Maqamat · Yousef Bajubair</p>
+  <p class="foot"><span data-l="ar">عود و مقامات · يوسف باجبير</span><span data-l="en">Oud &amp; Maqamat · Yousef Bajubair</span></p>
 </main>
 <script>
 (function(){
