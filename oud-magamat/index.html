@@ -155,16 +155,15 @@
   if (isIOS) steps.open = true;
   d.getElementById('iosBtn').addEventListener('click', function(e){ e.preventDefault(); steps.open = true; steps.scrollIntoView({behavior:'smooth', block:'start'}); });
   // اللغة
-  var saved=null; try{ saved = localStorage.getItem('om_lang'); }catch(e){}
-  var lang = saved || ((navigator.language||'ar').toLowerCase().indexOf('ar')===0 ? 'ar' : 'en');
+  var saved=null; try{ saved = localStorage.getItem('om_lang2'); }catch(e){}
+  var lang = (saved==='en' || saved==='ar') ? saved : 'ar';   // العربية افتراضية دائماً؛ لا يُحفظ إلا اختيار الزائر بنفسه
   var htmlEl = d.documentElement, btn = d.getElementById('langBtn');
   function setLang(l){
     htmlEl.lang = l; htmlEl.dir = (l==='ar') ? 'rtl' : 'ltr';
     btn.textContent = (l==='ar') ? 'English' : 'العربية';
-    try{ localStorage.setItem('om_lang', l); }catch(e){}
   }
   setLang(lang);
-  btn.addEventListener('click', function(){ setLang(htmlEl.lang==='ar' ? 'en' : 'ar'); });
+  btn.addEventListener('click', function(){ var l = htmlEl.lang==='ar' ? 'en' : 'ar'; setLang(l); try{ localStorage.setItem('om_lang2', l); }catch(e){} });
   // نسخ الرابط
   d.getElementById('copyBtn').addEventListener('click', function(){
     var url = location.href.split('#')[0], self=this, ar = htmlEl.lang==='ar';
